@@ -29,13 +29,24 @@ author: Donguk Park
 
 title: UNIST DIL Lab
 description: Data Intelligence 연구실 홈페이지입니다.
-theme: jekyll-theme-yat
 
 url: "https://unist-dil.github.io"
 
 markdown: kramdown
 paginate: 5
 
+remote_theme: jeffreytse/jekyll-theme-yat
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-spaceship
+  - jekyll-remote-theme
+
+kramdown:
+  input: GFM
 
 # Copyright setting
 # You can use any html code, currently below placeholders are available:
@@ -241,14 +252,7 @@ yat:
 
 # Build settings
 # highlighter: none
-kramdown:
-  input: GFM
 
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-spaceship
+
 
 
