@@ -1,55 +1,35 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# Only the main Sass file needs front matter
 ---
 
-// Default theme colors
 $theme-colors: (
   "coolblack": #090a0b,
   "spacegrey": #353535,
   "snowwhite": #ffffff,
 );
 
-// Default brand colors
 $brand-colors: (
   "orangered": #ff5100,
   "greatgold": #f2cb05,
   "greenblue": #389092,
 );
 
-$theme-name: "{{ site.theme_color }}";
-$brand-name: "{{ site.brand_color }}";
-$theme-color: map-get($theme-colors, "snowwhite");
-$brand-color: map-get($brand-colors, "orangered");
+// Fallback 값으로 고정 설정 (Liquid 제거)
+$theme-name: "snowwhite";
+$brand-name: "orangered";
 
-@if map-has-key($theme-colors, $theme-name) {
-  $theme-color: map-get($theme-colors, $theme-name);
-} @else if str-index($theme-name, "#") == 1 {
-  $theme-color: {{ site.theme_color | default: '#ffffff' }};
-}
+// 색상 로직
+$theme-color: if(str-index($theme-name, "#") == 1, #ffffff, map-get($theme-colors, $theme-name));
+$brand-color: if(str-index($brand-name, "#") == 1, #ff5100, map-get($brand-colors, $brand-name));
 
-@if map-has-key($brand-colors, $brand-name) {
-  $brand-color: map-get($brand-colors, $brand-name);
-} @else if str-index($brand-name, "#") == 1 {
-  $brand-color: {{ site.brand_color | default: '#ff5100' }};
-}
+// 기타 스타일
+$content-width: 920px;
+$click-to-top-light-background-color: white;
+$click-to-top-light-color: #454545;
+$click-to-top-dark-background-color: #34323d;
+$click-to-top-dark-color: #bbb;
 
-$content-width: {{ site.content_width | default: '920px' }};
-
-// Click to top theme
-$click-to-top-light-background-color: {{ site.click_to_top.light.background_color | default: "white" }};
-$click-to-top-light-color: {{ site.click_to_top.light.color | default: "#454545" }};
-$click-to-top-dark-background-color: {{ site.click_to_top.dark.background_color | default: "#34323d" }};
-$click-to-top-dark-color: {{ site.click_to_top.dark.color | default: "#bbb" }};
-
-// Selection styles
-$selection-color: unquote("{{ site.selection.color }}");
-$selection-background-color: unquote("{{ site.selection.background_color }}");
-
-@if $selection-color == "" {
-  $selection-color: inherit;
-}
-@if $selection-background-color == "" {
-  $selection-background-color: rgba(invert($brand-color), 0.3);
-}
+$selection-color: inherit;
+$selection-background-color: rgba(invert($brand-color), 0.3);
 
 @import "yat";
