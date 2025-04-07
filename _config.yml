@@ -27,7 +27,7 @@
 email: unist.dilab@gmail.com
 author: Donguk Park
 
-title: UNIST DIL Lab
+title: UNIST Data Intelligence Lab
 description: Data Intelligence 연구실 홈페이지입니다.
 
 url: "https://unist-dil.github.io"
@@ -165,12 +165,14 @@ yat:
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
-# header_pages:
-#   - index.html
-#   - archives.html
-#   - categories.html
-#   - tags.html
-#   - about.md
+header_pages:
+  - index.html
+  - research.md
+  - members.md
+  - publications.md
+  - board.md
+  - contact.md
+
 
 # Page default value
 # defaults:
