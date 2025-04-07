@@ -1,11 +1,10 @@
 @charset "utf-8";
 
-// Deprecation Warning: Using / for division outside of calc() is deprecated
-// and will be removed in Dart Sass 2.0.0.
-// Recommendation: math.div($header-height, 1.5) or calc($header-height / 1.5)
-// More info and automated migrator: https://sass-lang.com/d/slash-div
-@use 'sass:math';
-@use 'sass:meta';
+// Dart Sass 2.0.0 대비 및 Github Pages 호환용
+
+// Optional: 만약 dart-sass 환경이라면 아래 주석 해제 가능
+// @use 'sass:math';
+// @use 'sass:meta';
 
 // Define defaults for each variable.
 
@@ -29,6 +28,7 @@ $white-color: #fdfdfd !default;
 
 $table-text-align: left !default;
 
+// theme-color 변수는 외부에서 정의된다고 가정
 $header-height: $base-line-height * $base-font-size * 2.85 !default;
 $header-text-color: invert($theme-color) !default;
 $header-background-color: $theme-color !default;
@@ -66,14 +66,17 @@ $on-laptop:        800px !default;
 
 // Better compatibility for divisions.
 //
-// Deprecation Warning: Using / for division outside of calc() is deprecated
-// and will be removed in Dart Sass 2.0.0."
+// GitHub Pages에서 sass:math 사용 불가하므로 fallback 로직 사용
 @function divide($dividend, $divisor: 1) {
-  @if meta.function-exists('div', 'math') {
-    @return math.div($dividend, $divisor);
-  } @else {
-    @return ($dividend / $divisor);
-  }
+  // 최신 Sass 지원 시 아래 사용 가능
+  // @if meta.function-exists('div', 'math') {
+  //   @return math.div($dividend, $divisor);
+  // } @else {
+  //   @return ($dividend / $divisor);
+  // }
+
+  // GitHub Pages 호환을 위한 단순 division
+  @return ($dividend / $divisor);
 }
 
 // Import partials.
