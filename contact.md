@@ -3,6 +3,9 @@ layout: about
 title: "Contact"
 permalink: /contact/
 ---
+<div style="background-color:#f2f2f2; padding:0.5rem 1rem; font-size:2.5rem; font-weight:bold; border-radius:6px; text-align: center;">
+  CONTACT
+</div>
 
 
 ## Recruitment Notice
