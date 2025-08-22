@@ -58,3 +58,16 @@ $selection-background-color: unquote("{{ site.selection.background_color }}");
 
 @import "yat";
 
+/* _sass/custom.scss */
+/* 헤더는 항상 흰색 */
+.site-header {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  position: relative;  /* 투명 덮임 방지 */
+  z-index: 10;         /* 배너보다 위로 */
+}
+
+/* 배너는 그대로 (필요시 배경 이미지/색 지정 가능) */
+.site-banner {
+  background-color: #ffffff; /* 배너도 흰색으로 고정하려면 추가 */
+}
