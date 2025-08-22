@@ -58,35 +58,3 @@ $selection-background-color: unquote("{{ site.selection.background_color }}");
 
 @import "yat";
 
-/* ==== Custom overrides ==== */
-/* 상시 흰 박스 (드래그와 무관) */
-.page-banner .post-info,
-.page-banner .page-title,
-.page-banner .post-title,
-.page-banner .post-meta,
-.page-banner .post-category,
-.post-cover  .post-info,
-.post-cover  .page-title,
-.post-cover  .post-title,
-.post-cover  .post-meta,
-.post-cover  .post-category {
-  background: rgba(255,255,255,0.9) !important;
-  color: #000 !important;
-  display: inline-block;
-  padding: 8px 12px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,.08);
-  position: relative;
-  z-index: 2; /* 배경 위로 확실히 올림 */
-}
-
-/* 제목과 메타가 줄바꿈되어도 깔끔하게 */
-.page-banner .post-info { 
-  display: inline-block; 
-}
-
-/* (선택) 텍스트 선택 색은 은은하게 */
-::selection {
-  background: rgba(255,255,255,0.4);
-  color: #000;
-}
