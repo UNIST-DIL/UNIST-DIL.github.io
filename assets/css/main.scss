@@ -59,12 +59,9 @@ $selection-background-color: unquote("{{ site.selection.background_color }}");
 @import "yat";
 
 /* ==== Custom overrides ==== */
-.page-banner .page-title,
-.page-banner .post-meta,
-.page-banner .post-category {
-  background: rgba(255,255,255,0.85);
-  color: #000 !important;
+.page-banner .post-info {
+  background: rgba(255,255,255,0.9);
+  padding: 10px 15px;
+  border-radius: 8px;
   display: inline-block;
-  padding: 4px 10px;
-  border-radius: 6px;
 }
