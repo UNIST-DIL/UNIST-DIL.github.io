@@ -57,3 +57,14 @@ $selection-background-color: unquote("{{ site.selection.background_color }}");
 }
 
 @import "yat";
+
+/* ==== Custom overrides ==== */
+.page-banner .page-title,
+.page-banner .post-meta,
+.page-banner .post-category {
+  background: rgba(255,255,255,0.85);
+  color: #000 !important;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
