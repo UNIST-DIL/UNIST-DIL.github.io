@@ -61,7 +61,10 @@ kramdown:
 #   "Copyright © 2017-2021 Foobar"
 #
 #copyright: "Unpublished Work (cleft) 2017-{currentYear} {author}"
-copyright: "<a href = 'https://aigs.unist.ac.kr/web/index.php#'>UNIST AI Grduate School</a>"
+copyright: |
+  <div>from <a href = 'https://aigs.unist.ac.kr/web/index.php#'>UNIST AI Grduate School</a></div>
+  <div>professor <a href = 'https://sites.google.com/view/yclee/'> Yeon-chang Lee</a></div>
+  <div> Office: 407-2, Building 106, Ulsan National Institue of Science and Technology, Korea(울산과학기술원 106동 407-2호)</div>
 
 
 #favicon: "" # the favicon for your site
