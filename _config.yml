@@ -61,6 +61,8 @@ kramdown:
 #   "Copyright © 2017-2021 Foobar"
 #
 #copyright: "Unpublished Work (cleft) 2017-{currentYear} {author}"
+copyright: "<a href = 'https://aigs.unist.ac.kr/web/index.php#'>UNIST AI Grduate School</a>"
+
 
 #favicon: "" # the favicon for your site
 
