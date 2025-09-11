@@ -59,16 +59,16 @@ $selection-background-color: unquote("{{ site.selection.background_color }}");
 @import "yat";
 
 /* _sass/custom.scss */
-/* 헤더는 항상 흰색으로 고정 */
-.site-header {
-  background-color: #ffffff !important;
-  background-image: none !important;
-  position: relative;   /* 배너 배경 위에 겹치도록 */
-  z-index: 20;          /* 배너보다 위로 */
-}
+// /* 헤더는 항상 흰색으로 고정 */
+// .site-header {
+//   background-color: #ffffff !important;
+//   background-image: none !important;
+//   position: relative;   /* 배너 배경 위에 겹치도록 */
+//   z-index: 20;          /* 배너보다 위로 */
+// }
 
-/* 배너는 기존 테마 동작 유지 (이미지나 색상 적용) */
-.site-banner {
-  background-color: inherit;
-  background-image: inherit;
-}
+// /* 배너는 기존 테마 동작 유지 (이미지나 색상 적용) */
+// .site-banner {
+//   background-color: inherit;
+//   background-image: inherit;
+// }
