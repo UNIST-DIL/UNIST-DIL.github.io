@@ -74,15 +74,16 @@ copyright: |
 yat:
   date_format: "%b %d, %Y"
 
-# If you want more debug log, you can set true
-# debug: false
+# If you want more debug log, you can set true -> 최종본에서 true로
+debug: true
 
 # If you don't want transparent header, you can set false
-# header_transparent: true
+header_transparent: false
 
 # If you want to change the content width, you can set to another value
 # content_width: "920px"
 
+# GA4 연동 - 방문자수, 페이지뷰, 유입경로
 # Google analytics - GA4
 # google_analytics: [Measurement ID]
 # enableDNT: "false"
@@ -120,8 +121,8 @@ yat:
 #     img: https://cdn.countryflags.com/thumbs/russia/flag-400.png
 #     text: Russian
 
-# You can choose a theme color
-# Default theme colors as below:
+# You can choose a theme color # UNIST색으로 바꾸기! 
+# Default theme colors as below: 
 # coolblack: #090a0b
 # spacegrey: #353535
 # snowwhite: #ffffff
