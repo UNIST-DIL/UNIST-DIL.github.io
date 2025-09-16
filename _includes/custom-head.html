@@ -4,3 +4,21 @@
   1. Head over to https://realfavicongenerator.net/ to add your own favicons.
   2. Customize default _includes/custom-head.html in your source directory and insert the given code snippet.
 {% endcomment %}
+
+<script>
+  window.BANNER_SLIDESHOW = {{ site.banner_slideshow | jsonify }};
+</script>
+
+<style>
+  .banner-controls {
+    position: absolute; inset: auto 16px 16px auto;
+    display: flex; gap: 8px; z-index: 5;
+  }
+  .banner-btn {
+    padding: 6px 10px; border: 0; border-radius: 8px;
+    background: rgba(0,0,0,.55); color: #fff; cursor: pointer;
+    backdrop-filter: blur(2px);
+  }
+  .banner-btn:hover { background: rgba(0,0,0,.75); }
+  .banner input[type="file"] { display: none; }
+</style>
