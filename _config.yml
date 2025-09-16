@@ -270,6 +270,7 @@ banner_slideshow:
     - /assets/images/banners/banner1.jpg
     - /assets/images/banners/banner2.jpg
     - /assets/images/banners/home.jpeg
+  interval_ms: 5000      
     
 
 
