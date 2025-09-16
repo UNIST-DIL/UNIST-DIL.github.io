@@ -62,6 +62,11 @@ $selection-background-color: unquote("{{ site.selection.background_color }}");
 
 @import "yat";
 
+.site-favicon {
+  height: 28px;   // 원하는 크기로 조정
+  width: auto;    // 가로는 비율에 맞게 자동
+}
+
 /* _sass/custom.scss */
 // /* 헤더는 항상 흰색으로 고정 */
 // .site-header {
