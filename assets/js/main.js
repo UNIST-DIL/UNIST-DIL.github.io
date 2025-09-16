@@ -57,6 +57,41 @@ function smoothScrollTo(y, time) {
 }
 
 // modification for DIL website
+
+document.addEventListener('DOMContentLoaded', function () {
+  var cfg = (window.BANNER_SLIDESHOW || {});
+  var imgs = Array.isArray(cfg.images) ? cfg.images : [];
+  if (!imgs.length) return;
+
+  // 배너 DOM 탐색 (Yat에서 .banner 요소 또는 내부 img 사용)
+  var banner = document.querySelector('.banner');
+  if (!banner) return;
+  var imgEl = banner.querySelector('img');
+
+  // 부드럽게 보이도록 미리 로드
+  imgs.forEach(function (u) { var i = new Image(); i.src = u; });
+
+  function setBanner(url) {
+    if (imgEl) {
+      imgEl.src = url;
+    } else {
+      banner.style.backgroundImage = "url('" + url + "')";
+      banner.style.backgroundSize = 'cover';
+      banner.style.backgroundPosition = 'center';
+    }
+  }
+
+  var idx = 0;
+  if (cfg.random_start) idx = Math.floor(Math.random() * imgs.length);
+  setBanner(imgs[idx]);
+
+  var interval = Math.max(1000, (cfg.interval_ms || 5000));
+  setInterval(function () {
+    idx = (idx + 1) % imgs.length;
+    setBanner(imgs[idx]);
+  }, interval);
+});
+
 document.addEventListener('DOMContentLoaded', function () {
   var banner = document.querySelector('.banner');
   if (!banner) return;
