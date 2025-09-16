@@ -264,6 +264,14 @@ header_pages:
 # Build settings
 # highlighter: none
 
+banner_slideshow:
+  images:
+    - /assets/images/banners/banner0.jpg
+    - /assets/images/banners/banner1.jpg
+    - /assets/images/banners/banner2.jpg
+    - /assets/images/banners/home.jpeg
+    
+
 
 
 
